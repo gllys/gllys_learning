@@ -1,0 +1,46 @@
+<suite name="FireflyAutomation">
+	<parameter name="platform" value="chrome" />
+	<test name="test_insert" preserve-order="ture">
+		<groups>
+			<define name="group_test"></define>
+			<define name="group_test1"></define>
+			<define name="group_test2"></define>
+			<define name="group_test3"></define>
+
+			<define name="FF">
+				<include name="group_test" />
+				<include name="group_test1" />
+
+			</define>
+
+
+			<define name="chrome">
+				<include name="group_test1" />
+				<include name="group_test2" />
+
+			</define>
+
+			<define name="IE">
+				<include name="group_test2" />
+				<include name="group_test3" />
+
+			</define>
+
+			<run>
+				<include name="browsers" />
+				<include name="chrome" />
+			</run>
+
+
+		</groups>
+
+
+		<classes>
+			<class name="practicetwo.homework.mutipleBrowser" />
+		</classes>
+
+
+	</test>
+
+
+</suite>

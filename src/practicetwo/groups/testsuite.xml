@@ -1,0 +1,39 @@
+<suite name="FireflyAutomation">
+	<test name="practice_gllys" preserve-order="ture">
+		<groups>
+			<define name="groupsone"></define>
+			<define name="groupstwo"></define>
+			<define name="groupsthree"></define>
+
+
+
+
+			<define name="grouptest">
+				<include name="groupsone" />
+				<include name="groupstwo" />
+			</define>
+
+
+
+
+			<define name="grouptest2">
+				<include name="groupstwo" />
+				<include name="groupsthree" />
+			</define>
+
+
+
+			<run>
+				<include name="grouptest"></include>
+			</run>
+		</groups>
+
+
+
+		<classes>
+			<class name="practicetwo.groups.practice3OnTesting" />
+		</classes>
+
+
+	</test>
+</suite>

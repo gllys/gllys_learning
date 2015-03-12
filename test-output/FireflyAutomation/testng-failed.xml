@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FireflyAutomation]">
+  <parameter name="platform" value="IE"/>
+  <test name="test_insert(failed)">
+    <groups>
+      <run>
+        <include name="browsers"/>
+        <include name="IE"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="practicetwo.homework.mutipleBrowser">
+        <methods>
+          <include name="gllys"/>
+          <include name="group_test_four"/>
+          <include name="group_test_three"/>
+        </methods>
+      </class> <!-- practicetwo.homework.mutipleBrowser -->
+    </classes>
+  </test> <!-- test_insert(failed) -->
+</suite> <!-- Failed suite [FireflyAutomation] -->
