@@ -4,6 +4,8 @@
 	<groupId>FireflyAutomation</groupId>
 	<artifactId>FireflyAutomation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
+	<!-- build For Testng Such in jenkins -->
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
@@ -14,9 +16,38 @@
 					<source />
 					<target />
 				</configuration>
+
+				<!-- Such in jenkins -->
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>[2.10,)</version>
+				<configuration>
+					<excludes>
+
+						<exclude>TestModule3/TestMutipleThreads.java</exclude>
+						<exclude>TestModule2/TestJavaInPom.java</exclude>
+						<exclude>TestModule4/TestTerry.java</exclude>
+						<exclude>TestModule5/TestFireFlyAtuomation.java</exclude>
+					</excludes>
+
+					<sureXmlFiles>
+						<sureXmlFile>
+							${project.basedir}/src/test/java/TestModule1/TestMavenSureFirePlugin.xml
+						</sureXmlFile>
+
+
+
+					</sureXmlFiles>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+
+	<!-- build For Testng Such in jenkins -->
+
+
+
 	<repositories>
 		<repository>
 			<id>ibiblio</id>
@@ -69,16 +100,16 @@
 			<artifactId>opencsv</artifactId>
 			<version>[2.3,)</version>
 		</dependency>
-		
-		
-		
-<!--         <dependency> -->
-<!--             <groupId>junit</groupId> -->
-<!--             <artifactId>junit</artifactId> -->
-<!--             <version>4.8.2</version> -->
-<!--         </dependency> -->
-		
-		</dependencies>
+
+
+
+		<!-- <dependency> -->
+		<!-- <groupId>junit</groupId> -->
+		<!-- <artifactId>junit</artifactId> -->
+		<!-- <version>4.8.2</version> -->
+		<!-- </dependency> -->
+
+	</dependencies>
 
 </project>
 
